@@ -33,7 +33,9 @@ const Hero = () => {
                     <Image alt="kobifacebook" src="/1.png" width={30} height={30} />
                 </div>
                 <div className='flex justify-center gap-5'>
-                    <button id="btnseework" className='btn' >See My Works </button>
+                    <button id="btnseework" className='btn bg-transparent' >See My Works </button>
+
+                    <button id="btnhireme" className='btn'> My Resume</button>
                     <button id="btnhireme" className='btn'>Hire  Me</button>
                 </div>
 

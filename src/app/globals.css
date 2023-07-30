@@ -31,11 +31,13 @@ flex-direction: column;
 justify-content: space-between;
 }
 .btn{
-  background-color: darkmagenta;
+  background-color: darkmagenta/20;
   cursor: pointer;
   padding: 10px;
-  border: none;
-  border-radius: 8%;
+  border: rgb(205, 138, 205) 2px solid ;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
   position: relative;
   box-sizing: border-box;
   transition: all 500ms ease; 

@@ -1,42 +1,73 @@
-"use client"
-import Image from 'next/image'
+'use client';
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, slideIn, staggerContainer, textVariant } from "../utils/motion";
-import { TypingText } from '../utils/CustomText';
+import { slideIn, staggerContainer } from '../utils/motion';
+import PortfolioCard from "../PortfolioCard";
+import { TypingText } from "../utils/CustomText";
 
-export default function Portfolio() {
+export const exploreWorlds = [
+    {
+        id: "world-1",
+        imgUrl: '/p1.png',
+        title: "Tribeup",
+        description: "description of the project"
+    },
+    {
+        id: "world-2",
+        imgUrl: '/p2.png',
+        title: "Appilab",
+        description: "description of the project"
+    },
+    {
+        id: "world-3",
+        imgUrl: "/p1.png",
+        title: "Bridge to Success",
+        description: "description of the project"
+    },
+    {
+        id: "world-4",
+        imgUrl: "/p2.png",
+        title: "Paradise Island",
+        description: "description of the project"
+    },
+];
+const Portfolio = () => {
 
-    const works = [
-        { id: 1, title: "Home", img: "", url: "/" },
-        { id: 2, title: "About", img: "", url: "/about" },
-        { id: 3, title: "Portfolio", img: "", url: "/portfolio" },
-        { id: 4, title: "Blog", img: "", url: "/blog" },
-        { id: 5, title: "Contact", img: "", url: "/contact" },
-        { id: 6, title: "Dashboard", img: "", url: "/dashboard" },
-    ]
+    const [active, setActive] = useState('world-2');
 
     return (
 
-        <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            id="container" className='h-screen flex flex-col gap-5 justify-center items-center'>
+        <section className="mx-8" id="Portfolio">
+            <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.25 }}
 
-            <TypingText title="Portfolio" />
+            >
+                <div className='flex sm:mx-8 items-center justify-center'>
 
-            <motion.p
-                variants={textVariant(0.5)}
+                    <TypingText title=" My Portfolio" />
+                </div>
 
-                className='max-w-5xl text-2xl font-light text-gray-400  '>
-                Welcome to my portfolio! Here, you will find a showcase of some of the projects I have worked on as a Full Stack and Front End Developer. These projects reflect my passion for creating exceptional user experiences and my dedication to delivering high-quality web applications.  </motion.p>
+                <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] mt-16 gap-5 ">
+                    {exploreWorlds.map((world, index) => (
+                        <PortfolioCard
+                            key={world.id}
+                            {...world}
+                            index={index}
+                            active={active}
+                            handleClick={setActive}
 
+                        />
 
+                    ))}
 
-
-
-
-        </motion.div>
+                </div>
+            </motion.div>
+        </section>
     )
 }
+    ;
+
+export default Portfolio;
