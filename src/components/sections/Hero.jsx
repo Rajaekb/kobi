@@ -32,11 +32,11 @@ const Hero = () => {
                     <Image alt="kobifacebook" src="/2.png" width={30} height={30} />
                     <Image alt="kobifacebook" src="/1.png" width={30} height={30} />
                 </div>
-                <div className='flex justify-center gap-5'>
-                    <button id="btnseework" className='btn bg-transparent' >See My Works </button>
+                <div className='flex justify-center gap-5 font-light text-gray-300'>
+                    <button id="btnseework" className='anim-circle btn' ><h4 className='z-10'> My Works</h4> </button>
 
-                    <button id="btnhireme" className='btn'> My Resume</button>
-                    <button id="btnhireme" className='btn'>Hire  Me</button>
+                    <button id="btnhireme" className='anim-circle btn'><h4 className='z-10'>My Resume</h4></button>
+                    <button id="btnhireme" className='anim-circle btn'> <h4 className='z-10'>Hire  Me</h4>x</button>
                 </div>
 
             </div>

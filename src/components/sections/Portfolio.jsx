@@ -20,14 +20,14 @@ export const exploreWorlds = [
     },
     {
         id: "world-3",
-        imgUrl: "/p1.png",
-        title: "Bridge to Success",
+        imgUrl: "/p3.png",
+        title: "News App",
         description: "description of the project"
     },
     {
         id: "world-4",
-        imgUrl: "/p2.png",
-        title: "Paradise Island",
+        imgUrl: "/p4.png",
+        title: "Chickens Recipes",
         description: "description of the project"
     },
 ];

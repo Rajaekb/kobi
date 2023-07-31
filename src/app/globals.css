@@ -34,17 +34,81 @@ justify-content: space-between;
   background-color: darkmagenta/20;
   cursor: pointer;
   padding: 10px;
-  border: rgb(205, 138, 205) 2px solid ;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
+
   position: relative;
   box-sizing: border-box;
   transition: all 500ms ease; 
 }
 
 .btn:hover{
-  color: darkmagenta;
+  color: #fff;
   background:#fff;
   font-weight: bold;
+}
+.anim-box{
+  position: relative;
+  width: 400px;
+  height: 300px ;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgba(0,0,0,0.5);
+ overflow: hidden;
+ border-radius: 20px;
+}
+.anim-box::before{
+  content: '';
+  position: absolute;
+background-image: conic-gradient(
+  #8c4dc4 20deg,
+  transparent 120deg
+);
+width: 150%;
+height: 150%;
+animation: rotate 4s linear infinite;
+}
+.anim-box::after{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #0e1538;
+  border-radius : 16px
+}
+.anim-circle{
+  position: relative;
+  width: 120px;
+  height: 120px ;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgba(215, 43, 215, 0.5);
+ overflow: hidden;
+ border-radius: 50%;
+}
+.anim-circle::before{
+  content: '';
+  position: absolute;
+background-image: conic-gradient(
+  #8c4dc4 20deg,
+  transparent 120deg
+);
+width: 150%;
+height: 150%;
+animation: rotate 4s linear infinite;
+}
+.anim-circle::after{
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #0e1538;
+  border-radius : 50%
+}
+@keyframes rotate
+{
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg) ;
+  }
 }
