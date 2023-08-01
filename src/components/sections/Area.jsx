@@ -58,9 +58,10 @@ export default function Area() {
             </motion.p>
 
             <div className='grid grid-cols-2 gap-7  max-w-5xl'>
-                {technologies.map((item) => (
+                {technologies.map((item, index) => (
 
-                    <div className='flex flex-col gap-5 border-b border-sky-500 justify-center  bg-transparent'>
+                    <motion.div variants={fadeIn('up', 'spring', index * 0.8, 0.8)}
+                        key={item.id} className='flex flex-col gap-5 border-b border-sky-500 justify-center  bg-transparent'>
 
 
                         <Image src={item.logoUrl} width={70} height={50} className='object-contain mx-auto z-10' />
@@ -68,7 +69,7 @@ export default function Area() {
                         <p className='mx-5 z-10 mb-10 '>
                             {item.description}
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
 
 

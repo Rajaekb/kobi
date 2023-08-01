@@ -53,8 +53,11 @@ export default function Portfolio2() {
                 As a passionate and dedicated developer, I specialize in creating dynamic and immersive web experiences using cutting-edge technologies. With a focus on React, Next.js, Tailwind CSS, and Framer Motion, I bring life to digital creations and build user interfaces that leave a lasting impression.
 
             </motion.p>
-            {myworks.map((item) => (
-                <div className='flex gap-5 justify-between  items-center max-w-5xl'>
+            {myworks.map((item, index) => (
+                <motion.div
+                    key={item.id}
+                    variants={fadeIn('up', 'spring', index * 0.8, 0.8)}
+                    className='flex gap-5 justify-between  items-center max-w-5xl'>
                     <div className='flex-1'>
 
                         <Image src={item.ImgUrl} width={500} height={500} className=' w-full rounded-xl' />
@@ -68,7 +71,7 @@ export default function Portfolio2() {
 
 
 
-                </div>
+                </motion.div>
             ))}
 
 
