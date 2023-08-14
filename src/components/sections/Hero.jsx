@@ -13,8 +13,8 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            id="container" className='h-screen flex justify-center items-center '>
-            <div id="column" className=' flex flex-col  justify-center gap-6'>
+            id="container" className='  h-screen flex justify-center items-center mx-auto '>
+            <div id="column" className=' flex flex-col justify-center gap-6  '>
                 <Image src="/kobi.jfif" alt="kobi" width={150} height={150} className='rounded-full grayscale object-fit self-center' />
                 <TypingText title="I'm a FullStack / Front End Developer." />
 
