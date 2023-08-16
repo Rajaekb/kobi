@@ -6,7 +6,7 @@ import { textContainer, textVariant2 } from './motion';
 export const TypingText = ({ title }) => (
   <motion.h1
     variants={textContainer}
-    className='flex justify-center px-10 mx-auto bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text font-bold text-transparent  text-xl md:text-5xl'
+    className='flex justify-center px-10  bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text font-bold text-transparent  text-lg md:text-5xl'
   >
     {Array.from(title).map((letter, index) => (
       <motion.span variants={textVariant2} key={index}>

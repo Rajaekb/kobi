@@ -21,12 +21,7 @@ body {
   background: rgb(65,14,119);
 background: radial-gradient(circle, rgba(65,14,119,1) 0%, rgba(7,7,77,1) 0%, rgba(2,0,36,1) 100%);
 }
-.container{
-  max-width: 1464px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
+
 .btn{
   background-color: darkmagenta/20;
   cursor: pointer;
@@ -73,8 +68,7 @@ animation: rotate 4s linear infinite;
 }
 .anim-circle{
   position: relative;
-  width: 120px;
-  height: 120px ;
+
  display: flex;
  justify-content: center;
  align-items: center;

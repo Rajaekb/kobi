@@ -16,8 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          <div className='max-w-[400px] md:max-w-[1462px] px-5 overflow-x-hidden '>
+          <div className='max-w-[400px] md:max-w-[1462px] px-10 overflow-x-hidden '>
             <Navbar />
+
             {children}
             <Footer />
           </div>
