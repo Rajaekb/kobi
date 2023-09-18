@@ -6,7 +6,10 @@ import Portfolio2 from "../components/sections/Portfolio2"
 import Area from "../components/sections/Area"
 import Contact from "../components/sections/Contact"
 
-
+export const metadata = {
+  title: 'Kobi Web Dev',
+  description: 'Front End developer , Freelancer ',
+}
 export default function Home() {
   return (
 

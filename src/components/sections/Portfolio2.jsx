@@ -20,12 +20,7 @@ const myworks = [
         title: "Appilab Web Site",
         description: "Next.js is the framework I trust to build powerful and performant React applications. Its server-side rendering capabilities and static site generation open up possibilities for lightning-fast loading times and improved SEO, making it an integral part of my workflow."
     },
-    {
-        id: 3,
-        ImgUrl: '/p3.png',
-        title: "Appilab Web Site",
-        description: "With Tailwind CSS, I embrace a utility-first approach to crafting visually stunning designs. Its highly customizable and low-level utility classes enable me to create pixel-perfect layouts while maintaining a streamlined and intuitive development process."
-    },
+
     {
         id: 4,
         ImgUrl: '/p4.png',
@@ -41,7 +36,7 @@ export default function Portfolio2() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
+            viewport={{ once: true, amount: 0.25 }}
             id="container" className='my-52  flex flex-col gap-12 justify-center items-center font-light text-gray-400  '>
 
             <TypingText title="My Works" />
@@ -49,7 +44,7 @@ export default function Portfolio2() {
             <motion.p
                 variants={textVariant(0.5)}
 
-                className='max-w-5xl text-2xl  '>
+                className='max-w-5xl text-md md:text-2xl font-light text-gray-400 mt-1  md:mt-5 '>
                 As a passionate and dedicated developer, I specialize in creating dynamic and immersive web experiences using cutting-edge technologies. With a focus on React, Next.js, Tailwind CSS, and Framer Motion, I bring life to digital creations and build user interfaces that leave a lasting impression.
 
             </motion.p>
@@ -57,7 +52,7 @@ export default function Portfolio2() {
                 <motion.div
                     key={item.id}
                     variants={fadeIn('up', 'spring', index * 0.8, 0.8)}
-                    className='flex gap-5 justify-between  items-center max-w-5xl'>
+                    className='flex flex-col md:flex-row gap-5 justify-between  items-center'>
                     <div className='flex-1'>
 
                         <Image src={item.ImgUrl} width={500} height={500} className=' w-full rounded-xl' />

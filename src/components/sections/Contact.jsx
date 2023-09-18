@@ -7,7 +7,7 @@ import ContactForm from "../ContactForm";
 const Contact = () => {
 
     return (
-        <section className="px-8 " id="Contact">
+        <section className="px-2 md:px-8 " id="Contact">
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"
@@ -22,7 +22,7 @@ const Contact = () => {
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.8, 1)}
 
-                    class="  relative flex  md:pb-20 mb-52  justify-between items-center flex-col sm:pt-0">
+                    class="  relative flex  md:pb-20 mb-52  justify-between items-center flex-row md:flex-col sm:pt-0">
 
 
                     <div className="   md:w-[1200px] w-full p-10 md:h-96 h-auto anim-box  flex  md:flex-row flex-col md:gap-60 ">

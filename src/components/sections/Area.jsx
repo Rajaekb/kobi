@@ -44,20 +44,20 @@ export default function Area() {
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.25 }}
-            id="container" className='my-52 h-screen flex flex-col gap-12 justify-center items-center font-light text-gray-400  '>
+            viewport={{ once: true, amount: 0.25 }}
+            id="container" className='my-52 flex flex-col gap-12 justify-center items-center font-light text-gray-400  '>
 
             <TypingText title="My Area Of Expertise" />
 
             <motion.p
                 variants={textVariant(0.5)}
 
-                className='max-w-5xl text-2xl  '>
+                className='max-w-5xl text-md md:text-2xl font-light text-gray-400  '>
                 As a passionate and dedicated developer, I specialize in creating dynamic and immersive web experiences using cutting-edge technologies. With a focus on React, Next.js, Tailwind CSS, and Framer Motion, I bring life to digital creations and build user interfaces that leave a lasting impression.
 
             </motion.p>
 
-            <div className='grid grid-cols-2 gap-7  max-w-5xl'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-7  max-w-5xl'>
                 {technologies.map((item, index) => (
 
                     <motion.div variants={fadeIn('up', 'spring', index * 0.8, 0.8)}

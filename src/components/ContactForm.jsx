@@ -37,57 +37,36 @@ const ContactForm2 = () => {
 	};
 
 	return (
-		<form className="mt-10" onSubmit={handleSubmit}>
-
-			<div className="grid gap-6 sm:grid-cols-2">
-				<div className="relative z-0">
-					<input required autoComplete="none"
-						type="text"
-						id='name'
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-						className="peer block w-full appearance-none border-0 border-b border-white bg-transparent py-2.5 px-0 text-sm text-gray-300 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-					<label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-200 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your name</label>
-				</div>
-				<div className="relative z-0">
-					<input required autoComplete="none"
-						type="email"
-						id='email'
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-						className="peer block w-full appearance-none border-0 border-b border-white bg-transparent py-2.5 px-0 text-sm text-gray-300 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-					<label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-200 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your email</label>
-				</div>
-				<div className="relative z-0 col-span-2">
-					<textarea
-						required autoComplete="none"
-						id="message"
-						value={message}
-						onChange={(e) => setMessage(e.target.value)}
-						rows="5"
-						className="peer block w-full appearance-none border-0 border-b border-white bg-transparent py-2.5 px-0 text-sm text-gray-300 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" "></textarea>
-					<label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-200 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your message</label>
-				</div>
+		<form class="p-6 flex flex-col justify-center">
+			<div class="flex flex-col">
+				<label for="name" class="hidden">Full Name</label>
+				<input type="name" name="name" id="name"
+					value={name}
+					onChange={(e) => setName(e.target.value)}
+					placeholder="Full Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
 			</div>
-			<motion.div
-				variants={textVariant(1.1)}
-				className='flex gap-5'>
-				<div className='mt-5 border-[3px] border-white opacity-75 hover:opacity-100'>
 
-					<input
-						className="py-2 px-6 font-bold tracking-[.25em]  hover:opacity-100 ease-in-out duration-300 hover:scale-110 text-white cursor-pointer" type="submit" />
+			<div class="flex flex-col mt-2">
+				<label for="email" class="hidden">Email</label>
+				<input type="email" name="email" id="email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
+			</div>
 
-				</div>
-				{form.state === 'loading' ? (
-					<div className="mt-8">Sending....</div>
-				) : form.state === 'error' ? (
-					<div>{form.message}</div>
-				) : (
-					form.state === 'success' && <div className="mt-8"> Your Message Sent successfully</div>
-				)}
+			<div class="flex flex-col mt-2">
+				<label for="tel" class="hidden">Number</label>
+				<input type="tel" name="tel" id="tel"
+					value={message}
+					onChange={(e) => setMessage(e.target.value)}
+					placeholder="Telephone Number" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
+			</div>
 
-			</motion.div>
+			<button type="submit" class="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+				Submit
+			</button>
 		</form>
+
 
 	);
 };
