@@ -19,7 +19,7 @@ export default function Aboutme() {
             <motion.p
                 variants={textVariant(0.5)}
 
-                className='max-w-4xl text-xl font-light text-gray-400  '>
+                className='max-w-4xl text-xl font-light text-gray-400 mx-auto '>
                 Hello!   I'm <span className='font-bold'>Kobi Rajae</span>,  , a passionate and dedicated Full Stack and Front End Developer with two years of experience specializing in React.js and Next.js.I thrive on crafting seamless user experiences and creating robust web applications that push the boundaries of modern technology.<br /><br />
 
                 Throughout my journey as a developer, I have honed my skills in developing scalable and efficient web solutions. My expertise lies in utilizing React.js and Next.js to build dynamic and interactive front-end interfaces, while seamlessly integrating them with powerful back-end systems. I possess a strong understanding of HTML, CSS, and JavaScript, and I'm proficient in utilizing various libraries and frameworks to expedite the development process and deliver high-quality products.<br /><br />
@@ -30,7 +30,6 @@ export default function Aboutme() {
 
                 I take pride in my attention to detail and my ability to create clean, well-documented code that is both efficient and maintainable. I strive for excellence in every project I undertake, and I am constantly seeking opportunities to improve my skills and grow as a developer.<br /><br />
 
-                Outside of work, I enjoy attending tech meetups and conferences, where I can network with like-minded professionals and gain insights from industry leaders. In my free time, you can find me experimenting with personal coding projects, exploring new design trends, or simply unwinding with a good book.<br /><br />
 
                 Thank you for taking the time to learn a little bit about me. I am excited to contribute my skills and expertise to your next project. Let's collaborate and create something remarkable together!
             </motion.p>
