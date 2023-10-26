@@ -15,14 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <div className='max-w-[450px] md:max-w-[1500px] px-10 overflow-x-hidden '>
-            <Navbar />
+        <div className='max-w-[450px] md:max-w-[1500px] px-10 overflow-x-hidden '>
+          <Navbar />
 
-            {children}
-            <Footer />
-          </div>
-        </AuthProvider>
+          {children}
+          <Footer />
+        </div>
 
 
       </body>
