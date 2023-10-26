@@ -8,7 +8,7 @@ import Contact from "../components/sections/Contact"
 
 export const metadata = {
   title: 'Kobi Web Dev',
-  description: 'Front End developer , Freelancer ',
+  description: 'Front End developer , Freelancer , fullstack developer , react js developer,developer morrocco',
 }
 export default function Home() {
   return (

@@ -15,17 +15,17 @@ const Contact = () => {
                 viewport={{ once: false, amount: 0.25 }}
 
             >
-                <div className=' flex my-12 items-center'>
+                <div className=' flex my-12 items-center py-5'>
 
                     <TypingText title="Contact Me" textStyles="text-center" />
                 </div>
                 <motion.div
                     variants={fadeIn('up', 'tween', 0.8, 1)}
 
-                    class="  relative flex  md:pb-20 mb-52  justify-between items-center flex-row md:flex-col sm:pt-0">
+                    class="  relative flex  md:pb-20 mb-52  justify-center items-center flex-row md:flex-col sm:pt-0">
 
 
-                    <div className="   md:w-[1200px] w-full p-10 md:h-96 h-auto anim-box  flex  md:flex-row flex-col md:gap-60 ">
+                    <div className=" py-5  md:w-[1200px] w-full p-10 md:h-96 h-auto anim-box  flex  md:flex-row flex-col md:gap-60 ">
                         <div className="z-10">
                             <p class="text-gray-400 mt-2">
                                 Fill in the form to start a conversation
@@ -56,7 +56,7 @@ const Contact = () => {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
                                 <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Rabat,Morrocco
+                                    Temara Rabat , Morrocco
 
                                 </div>
                             </div>

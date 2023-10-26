@@ -12,8 +12,8 @@ export default function AboutMe() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            id="container" className=' flex mt-52 justify-center items-center'>
-            <div>
+            id="container" className=' flex mt-52 justify-center items-center '>
+            <div className='space-y-10'>
                 <TypingText title="About Me" />
 
                 <motion.p

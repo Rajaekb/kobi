@@ -27,9 +27,17 @@ const Hero = () => {
                 </motion.p>
                 <div className='border-t-2 border-sky-500 w-[300px]  md:w-[500px] self-center'></div>
                 <div className='flex gap-4 justify-center  '>
-                    <Image alt="kobilinkedin" src="/3.png" width={30} height={30} />
-                    <Image alt="kobifacebook" src="/5.png" width={30} height={30} />
-                    <Image alt="kobifacebook" src="/2.png" width={30} height={30} />
+                    <a className="cursor-pointer" href='https://www.linkedin.com/in/kobi-rajae-06b60a174/' target='_blank'>
+                        <Image alt="kobilinkedin" src="/3.png" width={30} height={30} />
+                    </a>
+                    <a className="cursor-pointer" href='https://github.com/Rajaekb' target='_blank'>
+
+                        <Image alt="kobigithub" src="/5.png" width={30} height={30} />
+                    </a>
+                    <a className="cursor-pointer" href='https://www.instagram.com/rajae_kobi' target='_blank'>
+
+                        <Image alt="kobifacebook" src="/2.png" width={30} height={30} />
+                    </a>
                     <Image alt="kobifacebook" src="/1.png" width={30} height={30} />
                 </div>
                 <div className='flex justify-center gap-5 font-light text-gray-300'>

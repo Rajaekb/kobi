@@ -15,9 +15,11 @@ const links = [
 ]
 
 const Navbar = () => {
+
   const [navbar, setNavbar] = useState(false);
 
   const session = useSession();
+
   return (
 
     <nav className="w-full bg-[#030129] fixed top-0 left-0 right-0 z-10 border-b-[1px] border-gray-500 ">

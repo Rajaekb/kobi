@@ -5,6 +5,7 @@ import { fadeIn, slideIn, staggerContainer, textVariant } from './utils/motion';
 
 
 const ContactForm2 = () => {
+
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
@@ -37,13 +38,13 @@ const ContactForm2 = () => {
 	};
 
 	return (
-		<form class="p-6 flex flex-col justify-center">
+		<form class="sm:p-6 mt-5 flex flex-col justify-center">
 			<div class="flex flex-col">
 				<label for="name" class="hidden">Full Name</label>
 				<input type="name" name="name" id="name"
 					value={name}
 					onChange={(e) => setName(e.target.value)}
-					placeholder="Full Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
+					placeholder="Full Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-transparent border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
 			</div>
 
 			<div class="flex flex-col mt-2">
@@ -51,7 +52,7 @@ const ContactForm2 = () => {
 				<input type="email" name="email" id="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
+					placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-transparent border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
 			</div>
 
 			<div class="flex flex-col mt-2">
@@ -59,10 +60,10 @@ const ContactForm2 = () => {
 				<input type="tel" name="tel" id="tel"
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
-					placeholder="Telephone Number" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
+					placeholder="Telephone Number" class="w-100 mt-2 py-3 px-3 rounded-lg bg-transparent border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" />
 			</div>
 
-			<button type="submit" class="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300">
+			<button type="submit" className="w-full bg-purple-900 p-2 w-24 mt-4 rounded-md text-white flex justify-center hover:font-bold duration-300 transition ease-in-out ">
 				Submit
 			</button>
 		</form>
