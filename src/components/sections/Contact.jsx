@@ -7,7 +7,7 @@ import ContactForm from "../ContactForm";
 const Contact = () => {
 
     return (
-        <section className="px-2 md:px-8 " id="Contact">
+        <section className="px-2 md:px-8 " id="contact">
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"

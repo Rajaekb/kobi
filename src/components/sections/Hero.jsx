@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { motion } from "framer-motion";
 import { fadeIn, slideIn, staggerContainer, textVariant } from "../utils/motion";
 import { TypingText } from '../utils/CustomText';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
 
@@ -13,7 +14,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}
-            id="container" className='  h-screen flex justify-center items-center '>
+            id="home" className='  h-screen flex justify-center items-center '>
             <div id="column" className=' flex flex-col justify-center gap-6  mt-16'>
                 <Image src="/kobi.jfif" alt="kobi" width={150} height={150} className='rounded-full grayscale object-fit self-center ' />
                 <TypingText title="I'm a FullStack / Front End Developer." />
@@ -41,9 +42,17 @@ const Hero = () => {
                     <Image alt="kobifacebook" src="/1.png" width={30} height={30} />
                 </div>
                 <div className='flex justify-center gap-5 font-light text-gray-300'>
-                    <button id="btnseework" className='anim-circle btn w-[80px] md:w-[120px] h-[80px] md:h-[120px]' ><h4 className='z-10'> My Works</h4> </button>
+                    <Link to="portfolio"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}>
+                        <button id="btnseework" className='anim-circle btn w-[80px] md:w-[120px] h-[80px] md:h-[120px]' ><h4 className='z-10'> My Works</h4> </button>
+                    </Link>
+                    <a href="/kobicv.pdf" download="cv">
+                        <button id="btnhireme" className='anim-circle btn  w-[80px] md:w-[120px] h-[80px] md:h-[120px]'><h4 className='z-10'>My Resume</h4></button>
+                    </a>
 
-                    <button id="btnhireme" className='anim-circle btn  w-[80px] md:w-[120px] h-[80px] md:h-[120px]'><h4 className='z-10'>My Resume</h4></button>
                     <button id="btnhireme" className='anim-circle btn  w-[80px] md:w-[120px] h-[80px] md:h-[120px]'> <h4 className='z-10'>Hire  Me</h4>x</button>
                 </div>
 

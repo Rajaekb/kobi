@@ -46,7 +46,7 @@ export default function Portfolio2() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.25 }}
-            id="container" className=' sm:mx-44 my-52  flex flex-col gap-12 justify-center items-center font-light text-gray-400  '>
+            id="portfolio" className=' sm:mx-44 my-52  flex flex-col gap-12 justify-center items-center font-light text-gray-400  '>
 
             <TypingText title="My Works" />
 
